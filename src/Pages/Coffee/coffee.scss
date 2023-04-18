@@ -1,0 +1,125 @@
+.coffee-shop {
+    width: 100%;
+    // height: 100vh;
+    // overflow: hidden;
+
+    .items-container {
+        width: 100%;
+        display: grid;
+        // flex-direction: row;
+        grid-template-columns: repeat(3, 1fr);
+        // column-gap: 20px;
+
+        .section-1 {
+            width: 100%;
+            background-color: #393646;
+            padding: 20px;
+            // box-shadow: 0 0 10px  #000;
+            // border: 1px solid #111;
+
+            .section-title {
+                color: #fff;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .itemBox {
+                width: 100%;
+                // height: 70px;
+                padding: 10px;
+                background-color: #4F4557;
+                margin-bottom: 4px;
+                position: relative;
+                border-radius: 3px;
+                overflow: hidden;
+
+                .item-content {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    // display: none;
+
+
+
+                    .item-avatar {
+                        height: 65px;
+                        width: 65px;
+                        position: relative;
+                        border-radius: 10px;
+                        overflow: hidden;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .item-detail {
+                        position: relative;
+                        width: calc(100% - 200px);
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 15px;
+
+                        .item-name {
+                            width: 100%;
+                            margin: 0;
+                            color: #F4EEE0;
+                        }
+
+                        .item-desc {
+                            color: #fff;
+                            margin: 0;
+                            width: 300px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            // display: none;
+                        }
+                    }
+
+                    .item-cost {
+                        width: fit-content;
+                        text-align: center;
+
+                        .item-price {
+                            color: #fff;
+                            font-size: 1.4rem;
+                        }
+
+                        .price-strike{
+                            text-decoration: line-through;
+                        }
+
+                        .offer-price {
+                            color: #ff0000;
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    .btn-add {
+                        background-color: #ffe600;
+                        padding: 10px 20px;
+                        color: #111;
+                        border-top-left-radius: 25px;
+                        border-bottom-left-radius: 25px;
+                        border: none;
+                        outline: none;
+                        margin-left: 15px;
+                        position: absolute;
+                        right: 0;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
