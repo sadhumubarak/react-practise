@@ -1,3 +1,97 @@
+@import '../../mixins/variable';
+
+//header
+.header-bar {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 73px;
+
+    .header-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        .box-brand {
+            display: flex;
+            align-items: center;
+
+            .brand {
+                height: 53px;
+                width: auto;
+            }
+
+
+            .brand-name {
+                color: #fff;
+                font-weight: 600;
+
+                span {
+                    padding-left: 4px;
+
+                    &:last-child {
+                        font-weight: normal;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+//footer
+.footer-bar {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 63px;
+
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        .copyright {
+            color: #fff;
+            font-weight: 300;
+            font-size: .9rem;
+
+            span {
+                padding-left: 4px;
+                font-weight: 600;
+
+            }
+        }
+
+        .icon-holder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            width: 40px;
+            font-size: 1.7rem;
+            margin-right: 6px;
+            cursor: pointer;
+            color: #dfdfdf90;
+
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+
+
 .add-box {
     position: relative;
 
@@ -25,14 +119,23 @@
     margin: 0 auto;
     left: 50%;
     transform: translate(-50%);
-    top: 100px;
+    top: 150px;
 }
 
 .palete-holder {
     width: 90%;
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+
+    .palete-cover {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+        // justify-content: baseline;
+    }
 
 
     .card-frame {
@@ -40,6 +143,7 @@
         height: 270px;
         background-color: #fff;
         padding: 10px;
+        padding-bottom: 0;
         margin: 10px;
         border-radius: 5px;
         cursor: pointer;
@@ -53,35 +157,6 @@
             align-items: center;
             justify-content: center;
 
-            .utilitybox {
-                position: relative;
-                width: 70px;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                margin: 0 auto;
-                opacity: 0;
-
-                .tool {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100%;
-                }
-
-                .btn-tool {
-                    border: 1px solid #dfdfdf;
-                    border-radius: 50px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 0;
-                    height: 30px;
-                    width: 30px;
-                    position: unset;
-                    font-size: 1.2rem;
-                    margin: 5px;
-                }
-            }
         }
 
         .btn-action {
@@ -96,18 +171,29 @@
             border: none;
             cursor: pointer;
             // opacity: 0;
+
+            .fas {
+                font-size: 2rem;
+            }
         }
 
         .color-code {
             // background-color: red;
             text-align: center;
             text-transform: uppercase;
+            font-size: 1.2rem;
             font-weight: 600;
-            color: #646464;
+            color: #112a43;
             height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
+
+            i {
+                font-size: 1.2rem;
+                margin-right: 5px;
+                color: #112a43;
+            }
 
             .copy {
                 margin-left: 20px;
@@ -133,6 +219,42 @@
         }
     }
 
+    .utility-bar {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        background-color: #fff;
+        border-radius: 5px;
+
+
+        .btn-tool {
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            height: 33px;
+            width: 33px;
+            position: unset;
+            font-size: 1.2rem;
+            margin: 6px;
+            border-radius: 5px;
+            background-color: transparent;
+            cursor: pointer;
+
+
+            &:hover {
+                background-color: #d9e3eb;
+            }
+
+            i {
+                color: #112a43;
+            }
+        }
+    }
+
 }
 
 .main-tool {
@@ -142,7 +264,7 @@
 
     .gen-pal {
         height: 50px;
-        background-color: #ffe600;
+        background: $primary-color;
         color: #333;
         padding: 0 50px;
         border: none;
